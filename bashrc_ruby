@@ -1,0 +1,5 @@
+
+# Ruby
+if [ -f $HOME/.bash_ruby ]; then
+    . $HOME/.bash_ruby
+fi

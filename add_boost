@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f boost_1_47_0.tar.bz2 ]; then
+  tar --bzip2 -xf boost_1_47_0.tar.bz2
+  cd boost_1_47_0
+  sudo ./bootstrap.sh
+  sudo ./b2 install
+else
+  echo 'Missing File: boost_1_47_0.tar.bz2'
+  echo 'Visit: http://www.boost.org/users/history/version_1_47_0.html'
+fi

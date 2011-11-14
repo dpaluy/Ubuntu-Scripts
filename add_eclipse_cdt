@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#Fix for subclipse JavaHL
+sudo apt-get -y install libsvn-java
+
+wget http://ftp.wh2.tu-dresden.de/pub/mirrors/eclipse/technology/epp/downloads/release/indigo/R/eclipse-cpp-indigo-incubation-linux-gtk-x86_64.tar.gz
+
+
+tar xzvf eclipse-cpp-indigo-incubation-linux-gtk-x86_64.tar.gz 
+wget -O eclipse/icon.xpm http://algo.paluy.org/files/Tools/Eclipse/icon.xpm
+sudo mv eclipse /opt/eclipse
+sudo chown -R root:root /opt/eclipse
+sudo chmod -R +r /opt/eclipse
+sudo chmod +x /opt/eclipse/eclipse
+
+# Create executable
+wget http://algo.paluy.org/files/Tools/Eclipse/eclipse 
+sudo mv eclipse /usr/local/bin/eclipse
+sudo chown -R root:root /usr/local/bin/eclipse
+sudo chmod 755 /usr/local/bin/eclipse
+
+wget http://algo.paluy.org/files/Tools/Eclipse/eclipse.desktop
+sudo mv eclipse.desktop /usr/share/applications/
+sudo chown -R root:root /usr/share/applications/eclipse.desktop
+sudo chmod -R +r /usr/share/applications/eclipse.desktop
+
+# Initialise eclipse
+/opt/eclipse/eclipse --clean &

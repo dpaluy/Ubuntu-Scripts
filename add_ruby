@@ -1,0 +1,48 @@
+#!/bin/bash
+
+sudo apt-get -y install zlib1g-dev libssl-dev libreadline5-dev libyaml-dev build-essential bison checkinstall git curl zlib1g sqlite3 libsqlite3-dev openssl libssl-dev libmysqlclient16-dev subversion
+
+bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+
+source "$HOME/.rvm/scripts/rvm"
+
+#check whether RVM has been correctly installed
+type rvm | head -1
+
+#Install Ruby
+rvm install 1.9.2
+echo 'gem: --no-ri --no-rdoc' >> $HOME/.gemrc
+wget -O $HOME/.bash_ruby http://algo.paluy.org/files/Tools/bash_ruby
+wget http://algo.paluy.org/files/Tools/bashrc_ruby
+cat bashrc_ruby >> $HOME/.bashrc
+rm bashrc_ruby
+source ~/.bashrc
+rvm use 1.9.2
+rvm --default 1.9.2
+
+#Install Rails
+gem install rails --no-ri --no-rdoc
+gem install sqlite3 --no-ri --no-rdoc
+echo 'Rails Instalation done'
+ruby -v
+rails -v
+
+#Install Notifier
+add_notifier
+
+#Gedit TextMate
+echo "GEdit"
+sudo apt-get install gedit-plugins
+mkdir $HOME/.fonts
+wget -O $HOME/.fonts/MONACO.TTF http://www.webdevkungfu.com/files/MONACO.TTF
+wget http://www.stambouliote.de/download/gedit_classbrowser-0.2.1.tar.gz
+sudo tar xvzf gedit_classbrowser-0.2.1.tar.gz -C /usr/share/gedit-2/plugins/
+rm gedit_classbrowser-0.2.1.tar.gz
+echo 
+echo
+echo .....................................................
+wget http://grigio.org/files/darkmate.xml
+echo "Open gedit and click on Edit -> Preferences -> Font & Colors. Then click on Add button and locate the download file(darkmate.xml)."
+echo .....................................................
+echo "Visit http://blog.sudobits.com/2011/04/02/textmate-for-ubuntu-linux/ TO INSTALL GEDIT"
+

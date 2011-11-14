@@ -1,0 +1,4 @@
+#!/bin/sh
+#export MOZILLA_FIVE_HOME="/usr/lib/mozilla/"
+export ECLIPSE_HOME="/opt/eclipse"
+$ECLIPSE_HOME/eclipse $*
