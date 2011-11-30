@@ -10,19 +10,17 @@ source "$HOME/.rvm/scripts/rvm"
 type rvm | head -1
 
 #Install Ruby
-rvm install 1.9.2
+rvm install 1.9.3-head
+rvm use 1.9.3-head
+rvm gemset create rails313
 echo 'gem: --no-ri --no-rdoc' >> $HOME/.gemrc
-wget -O $HOME/.bash_ruby http://algo.paluy.org/files/Tools/bash_ruby
-wget http://algo.paluy.org/files/Tools/bashrc_ruby
+cp bash_ruby $HOME/.bash_ruby
 cat bashrc_ruby >> $HOME/.bashrc
-rm bashrc_ruby
 source ~/.bashrc
-rvm use 1.9.2
-rvm --default 1.9.2
+rvm use 1.9.3-head@rails311 --default
 
 #Install Rails
-gem install rails --no-ri --no-rdoc
-gem install sqlite3 --no-ri --no-rdoc
+gem install rails sqlite3
 echo 'Rails Instalation done'
 ruby -v
 rails -v
