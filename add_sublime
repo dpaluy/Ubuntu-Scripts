@@ -27,3 +27,4 @@ sudo chmod -R +r /usr/share/applications/sublime.desktop
 # HAML
 
 # Read more here: http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/
+# Unofficial Docs: http://readthedocs.org/docs/sublime-text-unofficial-documentation/en/latest/
