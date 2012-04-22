@@ -25,6 +25,10 @@ echo 'Rails Instalation done'
 ruby -v
 rails -v
 
+#Install Debugger
+gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-head/
+gem install debugger -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-head/
+
 #Install Notifier
 add_notifier
 
