@@ -11,12 +11,12 @@ type rvm | head -1
 #Install Ruby
 rvm install 1.9.3-head
 rvm use 1.9.3-head
-rvm gemset create rails313
+rvm gemset create rails323
 echo 'gem: --no-ri --no-rdoc' >> $HOME/.gemrc
 cp bash_ruby $HOME/.bash_ruby
 cat bashrc_ruby >> $HOME/.bashrc
 source ~/.bashrc
-rvm use 1.9.3-head@rails311 --default
+rvm use 1.9.3-head@rails323 --default
 
 #Install Rails
 gem install rails sqlite3
