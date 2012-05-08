@@ -1,9 +1,8 @@
 #!/bin/bash
 
-sudo apt-get -y install zlib1g-dev libssl-dev libreadline5-dev libyaml-dev build-essential bison checkinstall git curl zlib1g sqlite3 libsqlite3-dev openssl libssl-dev libmysqlclient16-dev subversion
+sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
 
-bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-
+curl -L get.rvm.io | bash -s stable
 source "$HOME/.rvm/scripts/rvm"
 
 #check whether RVM has been correctly installed
@@ -12,18 +11,22 @@ type rvm | head -1
 #Install Ruby
 rvm install 1.9.3-head
 rvm use 1.9.3-head
-rvm gemset create rails313
+rvm gemset create rails323
 echo 'gem: --no-ri --no-rdoc' >> $HOME/.gemrc
 cp bash_ruby $HOME/.bash_ruby
 cat bashrc_ruby >> $HOME/.bashrc
 source ~/.bashrc
-rvm use 1.9.3-head@rails311 --default
+rvm use 1.9.3-head@rails323 --default
 
 #Install Rails
 gem install rails sqlite3
 echo 'Rails Instalation done'
 ruby -v
 rails -v
+
+#Install Debugger
+gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-head/
+gem install debugger -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-head/
 
 #Install Notifier
 add_notifier
