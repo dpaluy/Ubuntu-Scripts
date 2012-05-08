@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Install Sublime
-wget http://algo.paluy.org/files/Tools/SublimeText2/SublimeText2Build2181x64.tar.bz2
-tar -jxvf SublimeText2Build2181x64.tar.bz2
-rm SublimeText2Build2181x64.tar.bz2
+wget http://algo.paluy.org/files/Tools/SublimeText2/SublimeText2-32.tar.bz2
+tar -jxvf SublimeText2-32.tar.bz2
+rm SublimeText2-32.tar.bz2
 wget -O SublimeText2/st2_icon_preview.png http://algo.paluy.org/files/Tools/SublimeText2/st2_icon_preview.png
 sudo mv SublimeText2 /opt/
 sudo ln -s /opt/SublimeText2/sublime_text /usr/local/bin/subl
