@@ -31,6 +31,8 @@ sudo apt-get install y-ppa-manager -y
 sudo apt-get install -y gnome-sushi
 # Open Terminal
 sudo apt-get install -y nautilus-open-terminal
+# Gnome Tweak Tool
+sudo apt-get install gnome-tweak-tool
 
 echo Visit:
 echo 'http://www.keepsharing31.com/15-things-to-do-after-installing-ubuntu-12-04-lts-precise-pangolin/'
