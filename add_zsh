@@ -1,6 +1,8 @@
 # Get zsh
+sudo apt-get install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 # Change shell
 chsh -s `which zsh`
 # Restart
-sudo shutdown -r 0
+echo Restart your Ubuntu
+echo 'sudo shutdown -r 0'
