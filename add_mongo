@@ -1,11 +1,6 @@
 #!/bin/bash
 
-# Update to your Ubuntu version
-
-sudo add-apt-repository 'deb http://extras.ubuntu.com/ubuntu oneiric main'
-sudo add-apt-repository 'deb-src http://extras.ubuntu.com/ubuntu oneiric main'  
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 sudo add-apt-repository 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'
 sudo apt-get update
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 sudo apt-get install mongodb-10gen
-

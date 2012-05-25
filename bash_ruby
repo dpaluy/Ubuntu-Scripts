@@ -1,7 +1,0 @@
-# Ruby settings
-
-# for ruby 1.9.2 - require
-export RUBYLIB="."
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-                        
