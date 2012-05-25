@@ -1,11 +1,13 @@
 #!/bin/bash
-wget http://algo.paluy.org/files/Tools/Soft/boost_1_47_0.tar.bz2
+wget http://garr.dl.sourceforge.net/project/boost/boost/1.47.0/boost_1_47_0.tar.bz2
 if [ -f boost_1_47_0.tar.bz2 ]; then
-  tar --bzip2 -xf boost_1_47_0.tar.bz2
+  sudo mv boost_1_47_0.tar.bz2 /opt
+  cd /opt
+  sudo tar --bzip2 -xf boost_1_47_0.tar.bz2
+  sudo rm /opt/boost_1_47_0.tar.bz2
   cd boost_1_47_0
   sudo ./bootstrap.sh
   sudo ./b2 install
-  rm boost_1_47_0.tar.bz2
 else
   echo 'Missing File: boost_1_47_0.tar.bz2'
   echo 'Visit: http://www.boost.org/users/history/version_1_47_0.html'
