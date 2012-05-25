@@ -16,12 +16,12 @@ sudo chmod -R +r /usr/share/applications/sublime.desktop
 
 # Cucumber bundle
 cd ~/.config/sublime-text-2/Packages
-git clone git://github.com/sagework/cucumber-sublime2-bundle.git Cucumber
+git clone git://github.com/dpaluy/cucumber-sublime2-bundle.git Cucumber
 
 # Add awesomeness
 ######################################
 # Will Bond’s Sublime Package Control
-# visit: http://wbond.net/sublime_packages/package_control/installation
+echo 'visit: http://wbond.net/sublime_packages/package_control/installation'
 # After it has installed close and reopen Sublime Text and now your can press ctrl + shift + p  
 # and you can now start installing some awesome packages by typing install and pressing enter.
 #
