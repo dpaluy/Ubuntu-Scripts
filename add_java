@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function usage {
+  echo "Usage: " $0 "jdk-file.tar.gz"
+  echo "============================="
+  echo "Download Oracle Java JDK package"
+  echo "Visit: http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u4-downloads-1591156.html"
+}
+
+if [ "$1" == "" ]; then
+  usage
+  exit
+fi
+
+if [ -f $1 ]; then
+  filename=$(basename $1)
+  tar -xvf $1
+  DIRNAME=$(tar -tvf $1  | head -1 | sed -e 's:^.* \([^/]*\)/.*$:\1:')
+  sudo mv $DIRNAME /usr/lib/jvm/jdk1.7.0
+  echo "Installing JDK"
+  sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0/bin/java" 1
+  sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.7.0/bin/javac" 1 
+  sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.7.0/bin/javaws" 1
+  rm -Rf tmp
+  echo "DONE"
+  echo "Don't forget to remove " $1
+  echo rm $1
+else
+  echo $1 "not found"
+  echo "============================="
+  usage
+fi
+ 
