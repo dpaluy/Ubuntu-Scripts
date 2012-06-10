@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo Visit: http://rootzwiki.com/topic/23008-howto-install-java-7-on-ubuntu-1204/
+
 function usage {
   echo "Usage: " $0 "jdk-file.tar.gz"
   echo "============================="
