@@ -32,6 +32,6 @@ echo 'visit: http://wbond.net/sublime_packages/package_control/installation'
 # Rspec
 # HAML
 # Ruby Test https://github.com/maltize/sublime-text-2-ruby-tests
-
-# Read more here: http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/
-# Unofficial Docs: http://readthedocs.org/docs/sublime-text-unofficial-documentation/en/latest/
+echo Git: https://github.com/kemayo/sublime-text-2-git/wiki
+echo Read more here: http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/
+echo Unofficial Docs: http://readthedocs.org/docs/sublime-text-unofficial-documentation/en/latest/
