@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Adding RAILS for GEDIT
 sudo add-apt-repository ppa:ubuntu-on-rails/ppa
 sudo apt-get update
@@ -22,4 +21,5 @@ wget http://grigio.org/files/darkmate.xml
 echo "Open gedit and click on Edit -> Preferences -> Font & Colors. Then click on Add button and locate the download file(darkmate.xml)."
 echo .....................................................
 echo "Visit http://blog.sudobits.com/2011/04/02/textmate-for-ubuntu-linux/ TO INSTALL GEDIT"
+
 
