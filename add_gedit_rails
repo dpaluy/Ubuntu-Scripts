@@ -11,7 +11,7 @@ echo "GEdit"
 mkdir $HOME/.fonts
 wget -O $HOME/.fonts/MONACO.TTF http://www.webdevkungfu.com/files/MONACO.TTF
 wget http://www.stambouliote.de/download/gedit_classbrowser-0.2.1.tar.gz
-sudo tar xvzf gedit_classbrowser-0.2.1.tar.gz -C /usr/share/gedit-2/plugins/
+sudo tar xvzf gedit_classbrowser-0.2.1.tar.gz -C /usr/share/gedit/plugins/
 rm gedit_classbrowser-0.2.1.tar.gz
 
 echo .....................................................
