@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Adding RAILS for GEDIT
 sudo add-apt-repository ppa:ubuntu-on-rails/ppa
 sudo apt-get update
@@ -7,15 +8,12 @@ sudo apt-get install gedit-plugins
 
 #Gedit TextMate
 echo "GEdit"
-sudo apt-get install gedit-plugins
 mkdir $HOME/.fonts
 wget -O $HOME/.fonts/MONACO.TTF http://www.webdevkungfu.com/files/MONACO.TTF
 wget http://www.stambouliote.de/download/gedit_classbrowser-0.2.1.tar.gz
 sudo tar xvzf gedit_classbrowser-0.2.1.tar.gz -C /usr/share/gedit-2/plugins/
 rm gedit_classbrowser-0.2.1.tar.gz
 
-echo 
-echo
 echo .....................................................
 wget http://grigio.org/files/darkmate.xml
 echo "Open gedit and click on Edit -> Preferences -> Font & Colors. Then click on Add button and locate the download file(darkmate.xml)."
